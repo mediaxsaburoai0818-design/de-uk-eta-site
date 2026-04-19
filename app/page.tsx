@@ -1,65 +1,156 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "UK ETA Online | Elektronische Reisegenehmigung fur Grossbritannien",
+  description: "Alle Informationen zur UK ETA fur deutsche Staatsburger. Erfahren Sie alles uber Gebuhren, Gultigkeit, Antragsprozess und Anforderungen.",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero Section */}
+      <section className="relative min-h-[520px] flex items-center justify-center text-center text-white"
+        style={{
+          backgroundImage: "linear-gradient(rgba(2,36,68,0.72), rgba(2,36,68,0.82)), url('/images/hero-uk.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="max-w-3xl mx-auto px-4 py-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+            UK ETA Online
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg md:text-xl text-gray-200 mb-3">
+            Elektronische Reisegenehmigung fur Grossbritannien
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+            Ab April 2025 benotigen deutsche Staatsburger eine elektronische Reisegenehmigung (ETA) fur die Einreise nach Grossbritannien. Hier finden Sie alle wichtigen Informationen.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block bg-[#8d1812] hover:bg-[#a82018] text-white font-semibold py-3.5 px-8 text-base transition-colors"
+            style={{ width: "360px", maxWidth: "100%" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            UK ETA beantragen
+          </a>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-[#f8f6f3] py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 text-center shadow-sm">
+              <div className="text-3xl font-bold text-[#022444] mb-1">10-20 GBP</div>
+              <div className="text-sm text-gray-600">Antragsgebuhr</div>
+            </div>
+            <div className="bg-white p-6 text-center shadow-sm">
+              <div className="text-3xl font-bold text-[#022444] mb-1">72 Std.</div>
+              <div className="text-sm text-gray-600">Bearbeitungszeit</div>
+            </div>
+            <div className="bg-white p-6 text-center shadow-sm">
+              <div className="text-3xl font-bold text-[#022444] mb-1">2 Jahre</div>
+              <div className="text-sm text-gray-600">Gultigkeit</div>
+            </div>
+            <div className="bg-white p-6 text-center shadow-sm">
+              <div className="text-3xl font-bold text-[#022444] mb-1">6 Monate</div>
+              <div className="text-sm text-gray-600">Max. Aufenthalt</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Info Cards Section */}
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Alles Wichtige zur UK ETA
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <InfoCard
+              title="Was ist UK ETA?"
+              text="Die Electronic Travel Authorisation ist eine digitale Reisegenehmigung, die ab 2025 fur visumfreie Reisende nach Grossbritannien erforderlich ist."
+              href="/eta-info/was-ist-eta/"
             />
-            Deploy Now
-          </a>
+            <InfoCard
+              title="Wie beantrage ich?"
+              text="Der Antrag erfolgt online uber die offizielle UK ETA-App oder die GOV.UK-Website. Sie benotigen einen gultigen Reisepass und ein aktuelles Foto."
+              href="/eta-info/antrag/"
+            />
+            <InfoCard
+              title="Gebuhren und Kosten"
+              text="Die ETA kostet zwischen 10 und 20 GBP pro Person. Die Zahlung erfolgt online per Kreditkarte oder Debitkarte."
+              href="/eta-info/gebuehren/"
+            />
+            <InfoCard
+              title="Gultigkeit der ETA"
+              text="Eine genehmigte ETA ist 2 Jahre gultig oder bis zum Ablauf Ihres Reisepasses. Jeder Aufenthalt darf maximal 6 Monate dauern."
+              href="/eta-info/gueltigkeit/"
+            />
+            <InfoCard
+              title="Erforderliche Dokumente"
+              text="Fur den Antrag benotigen Sie einen biometrischen Reisepass, ein digitales Passfoto und eine gultige Zahlungsmethode."
+              href="/eta-info/erforderliche-dokumente/"
+            />
+            <InfoCard
+              title="Transit durch UK"
+              text="Auch fur den Transit durch Grossbritannien ist eine ETA erforderlich, selbst wenn Sie das Land nicht verlassen."
+              href="/eta-info/transit/"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Deutsche Community Section */}
+      <section className="bg-[#f8f6f3] py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Deutsche in Grossbritannien
+          </h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Rund 300.000 Deutsche leben in Grossbritannien. Jahrlich reisen etwa 3,5 Millionen deutsche Staatsburger ins Vereinigte Konigreich - fur Geschaftsreisen, Tourismus und Studium.
+          </p>
+          <div className="text-center">
+            <a href="/eta-info/deutsche-gemeinschaft/" className="text-[#8d1812] hover:text-[#a82018] font-semibold text-base underline">
+              Mehr uber Deutsche in Grossbritannien erfahren
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#022444] py-16 text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Jetzt Ihre UK ETA beantragen
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+            Der Antragsprozess dauert nur wenige Minuten. Stellen Sie sicher, dass Sie Ihre ETA rechtzeitig vor Ihrer Reise beantragen.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block bg-[#8d1812] hover:bg-[#a82018] text-white font-semibold py-3.5 px-8 text-base transition-colors"
+            style={{ width: "360px", maxWidth: "100%" }}
           >
-            Documentation
+            UK ETA beantragen
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
+  );
+}
+
+function InfoCard({ title, text, href }: { title: string; text: string; href: string }) {
+  return (
+    <a href={href} className="block bg-white border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow group">
+      <h3 className="text-lg font-bold text-[#022444] mb-3 group-hover:text-[#8d1812] transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+        {title}
+      </h3>
+      <p className="text-sm text-gray-600 leading-relaxed">{text}</p>
+    </a>
   );
 }
