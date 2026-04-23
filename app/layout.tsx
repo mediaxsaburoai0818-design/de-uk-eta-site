@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "UK ETA Online | Elektronische Reisegenehmigung fur Grossbritannien",
   description: "Alle Informationen zur UK ETA (Electronic Travel Authorisation) fur deutsche Staatsburger. Gebuhren, Gultigkeit, Antragsprozess und mehr.",
-  metadataBase: new URL("https://de-uk-eta-site.pages.dev"),
+  metadataBase: new URL("https://eta-de.com"),
 };
 
 export default function RootLayout({
