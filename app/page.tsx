@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - bright with light overlay */}
+      {/* Hero Section - bright with light wine overlay */}
       <section className="relative min-h-[520px] flex items-center justify-center text-center text-white overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -16,7 +16,7 @@ export default function HomePage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(27,67,50,0.50), rgba(27,67,50,0.40))" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(107,39,55,0.50), rgba(107,39,55,0.40))" }} />
         <div className="relative max-w-3xl mx-auto px-10 md:px-16 py-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
             UK ETA Online
@@ -32,7 +32,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-semibold py-3.5 px-8 text-base transition-colors"
-            style={{ backgroundColor: "#b8860b", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
+            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
           >
             UK ETA beantragen
           </a>
@@ -40,27 +40,27 @@ export default function HomePage() {
       </section>
 
       {/* Accent line */}
-      <div className="h-1" style={{ background: "linear-gradient(to right, #b8860b, #daa520, #b8860b)" }} />
+      <div className="h-1" style={{ background: "linear-gradient(to right, #6b2737, #e8635a, #6b2737)" }} />
 
-      {/* Stats Section - cream background with floating cards */}
-      <section style={{ backgroundColor: "#faf8f0" }} className="py-16">
+      {/* Stats Section - warm pink bg with floating cards */}
+      <section style={{ backgroundColor: "#fdf6f4" }} className="py-16">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #b8860b", textAlign: "center" }}>
-              <div className="text-3xl font-bold mb-1" style={{ color: "#1b4332" }}>10-20 GBP</div>
-              <div className="text-sm" style={{ color: "#5a6b5a" }}>Antragsgebuhr</div>
+            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e8635a", textAlign: "center" }}>
+              <div className="text-3xl font-bold mb-1" style={{ color: "#6b2737" }}>10-20 GBP</div>
+              <div className="text-sm" style={{ color: "#7f8c8d" }}>Antragsgebuhr</div>
             </div>
-            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #b8860b", textAlign: "center" }}>
-              <div className="text-3xl font-bold mb-1" style={{ color: "#1b4332" }}>72 Std.</div>
-              <div className="text-sm" style={{ color: "#5a6b5a" }}>Bearbeitungszeit</div>
+            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e8635a", textAlign: "center" }}>
+              <div className="text-3xl font-bold mb-1" style={{ color: "#6b2737" }}>72 Std.</div>
+              <div className="text-sm" style={{ color: "#7f8c8d" }}>Bearbeitungszeit</div>
             </div>
-            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #b8860b", textAlign: "center" }}>
-              <div className="text-3xl font-bold mb-1" style={{ color: "#1b4332" }}>2 Jahre</div>
-              <div className="text-sm" style={{ color: "#5a6b5a" }}>Gultigkeit</div>
+            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e8635a", textAlign: "center" }}>
+              <div className="text-3xl font-bold mb-1" style={{ color: "#6b2737" }}>2 Jahre</div>
+              <div className="text-sm" style={{ color: "#7f8c8d" }}>Gultigkeit</div>
             </div>
-            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #b8860b", textAlign: "center" }}>
-              <div className="text-3xl font-bold mb-1" style={{ color: "#1b4332" }}>6 Monate</div>
-              <div className="text-sm" style={{ color: "#5a6b5a" }}>Max. Aufenthalt</div>
+            <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e8635a", textAlign: "center" }}>
+              <div className="text-3xl font-bold mb-1" style={{ color: "#6b2737" }}>6 Monate</div>
+              <div className="text-sm" style={{ color: "#7f8c8d" }}>Max. Aufenthalt</div>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
       {/* Info Cards Section - white bg */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ fontFamily: "'Playfair Display', serif", color: "#1b4332" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ fontFamily: "'Playfair Display', serif", color: "#6b2737" }}>
             Alles Wichtige zur UK ETA
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -107,25 +107,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Deutsche Community Section - cream bg */}
-      <section style={{ backgroundColor: "#faf8f0" }} className="py-16">
+      {/* Deutsche Community Section - warm bg */}
+      <section style={{ backgroundColor: "#fdf6f4" }} className="py-16">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6" style={{ fontFamily: "'Playfair Display', serif", color: "#1b4332" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6" style={{ fontFamily: "'Playfair Display', serif", color: "#6b2737" }}>
             Deutsche in Grossbritannien
           </h2>
-          <p className="text-center mb-8 max-w-2xl mx-auto" style={{ color: "#5a6b5a" }}>
+          <p className="text-center mb-8 max-w-2xl mx-auto" style={{ color: "#7f8c8d" }}>
             Rund 300.000 Deutsche leben in Grossbritannien. Jahrlich reisen etwa 3,5 Millionen deutsche Staatsburger ins Vereinigte Konigreich - fur Geschaftsreisen, Tourismus und Studium.
           </p>
           <div className="text-center">
-            <a href="/eta-info/deutsche-gemeinschaft/" className="font-semibold text-base underline" style={{ color: "#b8860b" }}>
+            <a href="/eta-info/deutsche-gemeinschaft/" className="font-semibold text-base underline" style={{ color: "#e8635a" }}>
               Mehr uber Deutsche in Grossbritannien erfahren
             </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - forest green */}
-      <section style={{ backgroundColor: "#1b4332" }} className="py-16 text-center">
+      {/* CTA Section - wine */}
+      <section style={{ backgroundColor: "#6b2737" }} className="py-16 text-center">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Jetzt Ihre UK ETA beantragen
@@ -138,7 +138,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-semibold py-3.5 px-8 text-base transition-colors"
-            style={{ backgroundColor: "#b8860b", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
+            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
           >
             UK ETA beantragen
           </a>
@@ -150,11 +150,11 @@ export default function HomePage() {
 
 function InfoCard({ title, text, href }: { title: string; text: string; href: string }) {
   return (
-    <a href={href} className="block p-6 transition-shadow group" style={{ backgroundColor: "#faf8f0", borderRadius: "10px", border: "1px solid #e8e0d0" }}>
-      <h3 className="text-lg font-bold mb-3 transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: "#1b4332" }}>
+    <a href={href} className="block p-6 transition-shadow group" style={{ backgroundColor: "#fdf6f4", borderRadius: "10px", border: "1px solid #f0e0dc" }}>
+      <h3 className="text-lg font-bold mb-3 transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: "#6b2737" }}>
         {title}
       </h3>
-      <p className="text-sm leading-relaxed" style={{ color: "#5a6b5a" }}>{text}</p>
+      <p className="text-sm leading-relaxed" style={{ color: "#7f8c8d" }}>{text}</p>
     </a>
   );
 }
