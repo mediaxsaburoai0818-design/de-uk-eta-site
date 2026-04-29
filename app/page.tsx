@@ -55,10 +55,10 @@ export default function HomePage() {
             href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-semibold py-3.5 px-8 text-base transition-colors rounded-xl border-2 border-white"
-            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white" }}
+            className="block rounded-xl border-2 border-white transition shadow-lg text-center mx-auto"
+            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px" }}
           >
-            UK ETA beantragen
+            <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>UK ETA beantragen</span>
           </a>
         </div>
       </section>
@@ -148,7 +148,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section - blue */}
-      <section style={{ backgroundColor: "#1a5276", marginBottom: "20px" }} className="pt-16 pb-16 text-center">
+      <section style={{ backgroundColor: "#1a5276", marginBottom: "20px" }} className="pt-16 pb-24 text-center">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Jetzt Ihre UK ETA beantragen
@@ -160,10 +160,10 @@ export default function HomePage() {
             href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-semibold py-3.5 px-8 text-base transition-colors rounded-xl border-2 border-white"
-            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white" }}
+            className="block rounded-xl border-2 border-white transition shadow-lg text-center mx-auto"
+            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px" }}
           >
-            UK ETA beantragen
+            <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>UK ETA beantragen</span>
           </a>
         </div>
       </section>
