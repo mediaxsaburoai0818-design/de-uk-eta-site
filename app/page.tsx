@@ -32,7 +32,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-semibold py-3.5 px-8 text-base transition-colors"
-            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
+            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "100%", maxWidth: "360px" }}
           >
             UK ETA beantragen
           </a>
@@ -138,7 +138,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-semibold py-3.5 px-8 text-base transition-colors"
-            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "360px", maxWidth: "100%" }}
+            style={{ backgroundColor: "#e8635a", borderRadius: "8px", width: "100%", maxWidth: "360px" }}
           >
             UK ETA beantragen
           </a>
