@@ -1,14 +1,39 @@
 import type { Metadata } from "next";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "UK ETA Online | Elektronische Reisegenehmigung fur Grossbritannien",
   description: "Alle Informationen zur UK ETA fur deutsche Staatsburger. Erfahren Sie alles uber Gebuhren, Gultigkeit, Antragsprozess und Anforderungen.",
 };
 
+const faqItems = [
+  {
+    question: "Benotigen deutsche Staatsburger eine UK ETA?",
+    answer: "Ja. Ab dem 2. April 2025 benotigen alle deutschen Staatsburger eine ETA fur Reisen nach Grossbritannien.",
+  },
+  {
+    question: "Was kostet die UK ETA und wie lange ist sie gultig?",
+    answer: "Die Gebuhr betragt 10-20 GBP. Die ETA ist 2 Jahre gultig und erlaubt mehrfache Einreisen, jeweils bis zu 6 Monate.",
+  },
+  {
+    question: "Was ist der Unterschied zwischen UK ETA und Visum?",
+    answer: "Die UK ETA ist eine vereinfachte elektronische Genehmigung fur kurze Aufenthalte (bis 6 Monate). Ein Visum erfordert einen Termin im Visumzentrum und kostet ab 100 GBP.",
+  },
+];
+
+const photoCards = [
+  { title: "Was ist UK ETA?", image: "/images/card-what-is-eta.png", href: "/eta-info/was-ist-eta/" },
+  { title: "Wie beantrage ich?", image: "/images/card-application.png", href: "/eta-info/antrag/" },
+  { title: "Gebuhren und Kosten", image: "/images/card-fee.png", href: "/eta-info/gebuehren/" },
+  { title: "Gultigkeit der ETA", image: "/images/card-validity.png", href: "/eta-info/gueltigkeit/" },
+  { title: "Erforderliche Dokumente", image: "/images/card-documents.png", href: "/eta-info/erforderliche-dokumente/" },
+  { title: "Transit durch UK", image: "/images/card-transit.png", href: "/eta-info/transit/" },
+];
+
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - bright with light blue overlay */}
+      {/* Hero Section */}
       <section className="relative min-h-[520px] flex items-center justify-center text-center text-white overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -16,7 +41,6 @@ export default function HomePage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* overlay removed */}
         <div className="relative max-w-3xl mx-auto px-10 md:px-16 py-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif", textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
             UK ETA Online
@@ -42,23 +66,31 @@ export default function HomePage() {
       {/* Accent line */}
       <div className="h-1" style={{ background: "linear-gradient(to right, #1a5276, #2980b9, #1a5276)" }} />
 
-      {/* Stats Section - light blue bg with floating cards */}
+      {/* Stats Section - light blue bg with floating cards + icons */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-payment.png" alt="" width={40} height={40} className="mx-auto mb-3" />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>10-20 GBP</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Antragsgebuhr</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-clock.png" alt="" width={40} height={40} className="mx-auto mb-3" />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>72 Std.</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Bearbeitungszeit</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-calendar.png" alt="" width={40} height={40} className="mx-auto mb-3" />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>2 Jahre</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Gultigkeit</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-suitcase.png" alt="" width={40} height={40} className="mx-auto mb-3" />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>6 Monate</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Max. Aufenthalt</div>
             </div>
@@ -66,43 +98,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Info Cards Section - white bg */}
+      {/* Photo Card Grid Section - white bg */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
             Alles Wichtige zur UK ETA
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <InfoCard
-              title="Was ist UK ETA?"
-              text="Die Electronic Travel Authorisation ist eine digitale Reisegenehmigung, die ab 2025 fur visumfreie Reisende nach Grossbritannien erforderlich ist."
-              href="/eta-info/was-ist-eta/"
-            />
-            <InfoCard
-              title="Wie beantrage ich?"
-              text="Der Antrag erfolgt online uber die offizielle UK ETA-App oder die GOV.UK-Website. Sie benotigen einen gultigen Reisepass und ein aktuelles Foto."
-              href="/eta-info/antrag/"
-            />
-            <InfoCard
-              title="Gebuhren und Kosten"
-              text="Die ETA kostet zwischen 10 und 20 GBP pro Person. Die Zahlung erfolgt online per Kreditkarte oder Debitkarte."
-              href="/eta-info/gebuehren/"
-            />
-            <InfoCard
-              title="Gultigkeit der ETA"
-              text="Eine genehmigte ETA ist 2 Jahre gultig oder bis zum Ablauf Ihres Reisepasses. Jeder Aufenthalt darf maximal 6 Monate dauern."
-              href="/eta-info/gueltigkeit/"
-            />
-            <InfoCard
-              title="Erforderliche Dokumente"
-              text="Fur den Antrag benotigen Sie einen biometrischen Reisepass, ein digitales Passfoto und eine gultige Zahlungsmethode."
-              href="/eta-info/erforderliche-dokumente/"
-            />
-            <InfoCard
-              title="Transit durch UK"
-              text="Auch fur den Transit durch Grossbritannien ist eine ETA erforderlich, selbst wenn Sie das Land nicht verlassen."
-              href="/eta-info/transit/"
-            />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {photoCards.map((card) => (
+              <a key={card.href} href={card.href} className="block group" style={{ borderRadius: "12px", overflow: "hidden", backgroundColor: "#eaf2f8", border: "1px solid #d4e6f1" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={card.image} alt={card.title} className="w-full aspect-[4/3] object-cover" />
+                <div style={{ padding: "14px 16px" }}>
+                  <h3 className="text-sm sm:text-base font-bold" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276" }}>
+                    {card.title}
+                  </h3>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -121,6 +134,16 @@ export default function HomePage() {
               Mehr uber Deutsche in Grossbritannien erfahren
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-10 md:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
+            Haufig gestellte Fragen
+          </h2>
+          <FAQAccordion items={faqItems} />
         </div>
       </section>
 
@@ -145,16 +168,5 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
-}
-
-function InfoCard({ title, text, href }: { title: string; text: string; href: string }) {
-  return (
-    <a href={href} className="block p-6 transition-shadow group" style={{ backgroundColor: "#eaf2f8", borderRadius: "10px", border: "1px solid #d4e6f1" }}>
-      <h3 className="text-lg font-bold mb-3 transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", paddingLeft: "12px", borderLeft: "3px solid #c0392b" }}>
-        {title}
-      </h3>
-      <p className="text-sm leading-relaxed" style={{ color: "#5d6d7e" }}>{text}</p>
-    </a>
   );
 }

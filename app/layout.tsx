@@ -93,45 +93,45 @@ function MobileMenu() {
 
 function Footer() {
   return (
-    <footer className="bg-[#1a5276] text-gray-300">
+    <footer className="bg-[#1a5276]" style={{ color: "white" }}>
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-white text-lg font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               UK ETA Online
             </h3>
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
               Umfassende Informationen zur elektronischen Reisegenehmigung (ETA) fur Reisen nach Grossbritannien. Diese Website ist kein offizieller Regierungsdienst.
             </p>
           </div>
           <div>
             <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">ETA-Informationen</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/eta-info/was-ist-eta/" className="text-gray-400 hover:text-white transition-colors">Was ist UK ETA?</a></li>
-              <li><a href="/eta-info/antrag/" className="text-gray-400 hover:text-white transition-colors">Antrag stellen</a></li>
-              <li><a href="/eta-info/gebuehren/" className="text-gray-400 hover:text-white transition-colors">Gebuhren und Kosten</a></li>
-              <li><a href="/eta-info/gueltigkeit/" className="text-gray-400 hover:text-white transition-colors">Gultigkeit</a></li>
-              <li><a href="/eta-info/erforderliche-dokumente/" className="text-gray-400 hover:text-white transition-colors">Erforderliche Dokumente</a></li>
-              <li><a href="/eta-info/transit/" className="text-gray-400 hover:text-white transition-colors">Transit durch UK</a></li>
+            <ul className="space-y-2 text-sm" style={{ color: "white" }}>
+              <li><a href="/eta-info/was-ist-eta/" className="hover:underline transition-colors" style={{ color: "white" }}>Was ist UK ETA?</a></li>
+              <li><a href="/eta-info/antrag/" className="hover:underline transition-colors" style={{ color: "white" }}>Antrag stellen</a></li>
+              <li><a href="/eta-info/gebuehren/" className="hover:underline transition-colors" style={{ color: "white" }}>Gebuhren und Kosten</a></li>
+              <li><a href="/eta-info/gueltigkeit/" className="hover:underline transition-colors" style={{ color: "white" }}>Gultigkeit</a></li>
+              <li><a href="/eta-info/erforderliche-dokumente/" className="hover:underline transition-colors" style={{ color: "white" }}>Erforderliche Dokumente</a></li>
+              <li><a href="/eta-info/transit/" className="hover:underline transition-colors" style={{ color: "white" }}>Transit durch UK</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Rechtliches</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/ueber-uns/" className="text-gray-400 hover:text-white transition-colors">Uber uns</a></li>
-              <li><a href="/kontakt/" className="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
-              <li><a href="/datenschutz/" className="text-gray-400 hover:text-white transition-colors">Datenschutz</a></li>
-              <li><a href="/nutzungsbedingungen/" className="text-gray-400 hover:text-white transition-colors">Nutzungsbedingungen</a></li>
-              <li><a href="/faq/" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="/sitemap/" className="text-gray-400 hover:text-white transition-colors">Sitemap</a></li>
+            <ul className="space-y-2 text-sm" style={{ color: "white" }}>
+              <li><a href="/ueber-uns/" className="hover:underline transition-colors" style={{ color: "white" }}>Uber uns</a></li>
+              <li><a href="/kontakt/" className="hover:underline transition-colors" style={{ color: "white" }}>Kontakt</a></li>
+              <li><a href="/datenschutz/" className="hover:underline transition-colors" style={{ color: "white" }}>Datenschutz</a></li>
+              <li><a href="/nutzungsbedingungen/" className="hover:underline transition-colors" style={{ color: "white" }}>Nutzungsbedingungen</a></li>
+              <li><a href="/faq/" className="hover:underline transition-colors" style={{ color: "white" }}>FAQ</a></li>
+              <li><a href="/sitemap/" className="hover:underline transition-colors" style={{ color: "white" }}>Sitemap</a></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/10 pt-6 text-center text-xs text-gray-500">
+        <div className="border-t border-white/10 pt-6 text-center text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>
           <p>&copy; 2025 UK ETA Online. Alle Rechte vorbehalten.</p>
           <p className="mt-1">
             Diese Website ist nicht mit der britischen Regierung verbunden. Offizielle Informationen finden Sie auf{" "}
-            <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white underline">GOV.UK</a>.
+            <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" target="_blank" rel="noopener noreferrer" className="hover:underline underline" style={{ color: "white" }}>GOV.UK</a>.
           </p>
         </div>
       </div>
