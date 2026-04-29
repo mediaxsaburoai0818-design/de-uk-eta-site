@@ -67,7 +67,7 @@ export default function HomePage() {
       <div className="h-1" style={{ background: "linear-gradient(to right, #1a5276, #2980b9, #1a5276)" }} />
 
       {/* Stats Section - light blue bg with floating cards + icons */}
-      <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
+      <section style={{ backgroundColor: "#eaf2f8", marginBottom: "20px" }} className="py-16">
         <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
@@ -99,7 +99,7 @@ export default function HomePage() {
       </section>
 
       {/* Photo Card Grid Section - white bg */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" style={{ marginBottom: "20px" }}>
         <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Alles Wichtige zur UK ETA
@@ -121,7 +121,7 @@ export default function HomePage() {
       </section>
 
       {/* Deutsche Community Section - light blue bg */}
-      <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
+      <section style={{ backgroundColor: "#eaf2f8", marginBottom: "20px" }} className="py-16">
         <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Deutsche in Grossbritannien
@@ -138,7 +138,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" style={{ marginBottom: "20px" }}>
         <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Haufig gestellte Fragen
