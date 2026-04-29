@@ -41,22 +41,22 @@ export default function HomePage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative max-w-3xl mx-auto px-6 md:px-16 py-20">
+        <div className="relative py-20" style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif", textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
             UK ETA Online
           </h1>
           <p className="text-lg md:text-xl mb-3" style={{ color: "white", textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>
             Elektronische Reisegenehmigung fur Grossbritannien
           </p>
-          <p className="text-base mb-8 max-w-2xl mx-auto" style={{ color: "white", textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}>
+          <p className="text-base mb-8 max-w-2xl" style={{ color: "white", textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}>
             Ab April 2025 benotigen deutsche Staatsburger eine elektronische Reisegenehmigung (ETA) fur die Einreise nach Grossbritannien. Hier finden Sie alle wichtigen Informationen.
           </p>
           <a
             href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-xl border-2 border-white transition shadow-lg text-center mx-auto"
-            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px" }}
+            className="block rounded-xl border-2 border-white transition shadow-lg text-center"
+            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px", marginLeft: "auto", marginRight: "auto" }}
           >
             <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>UK ETA beantragen</span>
           </a>
@@ -68,29 +68,29 @@ export default function HomePage() {
 
       {/* Stats Section - light blue bg with floating cards + icons */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/icon-payment.png" alt="" width={40} height={40} className="mx-auto mb-3" />
+              <img src="/images/icon-payment.png" alt="" width={40} height={40} style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "12px" }} />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>10-20 GBP</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Antragsgebuhr</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/icon-clock.png" alt="" width={40} height={40} className="mx-auto mb-3" />
+              <img src="/images/icon-clock.png" alt="" width={40} height={40} style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "12px" }} />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>72 Std.</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Bearbeitungszeit</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/icon-calendar.png" alt="" width={40} height={40} className="mx-auto mb-3" />
+              <img src="/images/icon-calendar.png" alt="" width={40} height={40} style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "12px" }} />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>2 Jahre</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Gultigkeit</div>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/icon-suitcase.png" alt="" width={40} height={40} className="mx-auto mb-3" />
+              <img src="/images/icon-suitcase.png" alt="" width={40} height={40} style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "12px" }} />
               <div className="text-3xl font-bold mb-1" style={{ color: "#1a5276" }}>6 Monate</div>
               <div className="text-sm" style={{ color: "#5d6d7e" }}>Max. Aufenthalt</div>
             </div>
@@ -100,7 +100,7 @@ export default function HomePage() {
 
       {/* Photo Card Grid Section - white bg */}
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Alles Wichtige zur UK ETA
           </h2>
@@ -122,11 +122,11 @@ export default function HomePage() {
 
       {/* Deutsche Community Section - light blue bg */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Deutsche in Grossbritannien
           </h2>
-          <p className="text-center mb-8 max-w-2xl mx-auto" style={{ color: "#5d6d7e" }}>
+          <p className="text-center mb-8 max-w-2xl" style={{ color: "#5d6d7e" }}>
             Rund 300.000 Deutsche leben in Grossbritannien. Jahrlich reisen etwa 3,5 Millionen deutsche Staatsburger ins Vereinigte Konigreich - fur Geschaftsreisen, Tourismus und Studium.
           </p>
           <div className="text-center">
@@ -139,7 +139,7 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Haufig gestellte Fragen
           </h2>
@@ -149,19 +149,19 @@ export default function HomePage() {
 
       {/* CTA Section - blue */}
       <section style={{ backgroundColor: "#1a5276" }} className="pt-16 pb-24 text-center">
-        <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Jetzt Ihre UK ETA beantragen
           </h2>
-          <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.85)" }}>
+          <p className="mb-8" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "576px", marginLeft: "auto", marginRight: "auto" }}>
             Der Antragsprozess dauert nur wenige Minuten. Stellen Sie sicher, dass Sie Ihre ETA rechtzeitig vor Ihrer Reise beantragen.
           </p>
           <a
             href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-xl border-2 border-white transition shadow-lg text-center mx-auto"
-            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px" }}
+            className="block rounded-xl border-2 border-white transition shadow-lg text-center"
+            style={{ backgroundColor: "#c0392b", width: "100%", maxWidth: "360px", color: "white", textDecoration: "none", padding: "18px 24px", marginLeft: "auto", marginRight: "auto" }}
           >
             <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>UK ETA beantragen</span>
           </a>
