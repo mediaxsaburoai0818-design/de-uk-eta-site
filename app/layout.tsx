@@ -35,11 +35,11 @@ function Header() {
   return (
     <header className="bg-[#1a5276] text-white">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="text-white no-underline hover:text-white">
-          <div className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <a href="/" className="text-white no-underline hover:text-white" style={{ flexShrink: 0 }}>
+          <div className="text-lg md:text-xl font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
             UK ETA Online
           </div>
-          <div className="text-xs text-gray-300 tracking-wide">
+          <div className="text-[10px] md:text-xs text-gray-300 tracking-wide">
             Elektronische Reisegenehmigung
           </div>
         </a>
@@ -60,10 +60,10 @@ function Header() {
 
 function MobileMenuButton() {
   return (
-    <label htmlFor="mobile-menu-toggle" className="md:hidden cursor-pointer p-2">
-      <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-      <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-      <div className="w-6 h-0.5 bg-white"></div>
+    <label htmlFor="mobile-menu-toggle" className="md:hidden cursor-pointer p-2" style={{ flexShrink: 0 }}>
+      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", marginBottom: "5px", borderRadius: "2px" }}></span>
+      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", marginBottom: "5px", borderRadius: "2px" }}></span>
+      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", borderRadius: "2px" }}></span>
     </label>
   );
 }
