@@ -33,7 +33,7 @@ export default function RootLayout({
 
 function Header() {
   return (
-    <header className="bg-[#6b2737] text-white">
+    <header className="bg-[#1a5276] text-white">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="text-white no-underline hover:text-white">
           <div className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -72,7 +72,7 @@ function MobileMenu() {
   return (
     <>
       <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
-      <nav className="md:hidden hidden peer-checked:block bg-[#4a1a28] border-t border-white/10">
+      <nav className="md:hidden hidden peer-checked:block bg-[#0e3a56] border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm">
           <a href="/" className="text-gray-200 hover:text-white py-1">Startseite</a>
           <a href="/eta-info/was-ist-eta/" className="text-gray-200 hover:text-white py-1">Was ist ETA?</a>
@@ -93,7 +93,7 @@ function MobileMenu() {
 
 function Footer() {
   return (
-    <footer className="bg-[#6b2737] text-gray-300">
+    <footer className="bg-[#1a5276] text-gray-300">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
