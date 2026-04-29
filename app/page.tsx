@@ -69,7 +69,7 @@ export default function HomePage() {
       {/* Info Cards Section - white bg */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
             Alles Wichtige zur UK ETA
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -110,7 +110,7 @@ export default function HomePage() {
       {/* Deutsche Community Section - light blue bg */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
             Deutsche in Grossbritannien
           </h2>
           <p className="text-center mb-8 max-w-2xl mx-auto" style={{ color: "#5d6d7e" }}>
@@ -151,7 +151,7 @@ export default function HomePage() {
 function InfoCard({ title, text, href }: { title: string; text: string; href: string }) {
   return (
     <a href={href} className="block p-6 transition-shadow group" style={{ backgroundColor: "#eaf2f8", borderRadius: "10px", border: "1px solid #d4e6f1" }}>
-      <h3 className="text-lg font-bold mb-3 transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276" }}>
+      <h3 className="text-lg font-bold mb-3 transition-colors" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", paddingLeft: "12px", borderLeft: "3px solid #c0392b" }}>
         {title}
       </h3>
       <p className="text-sm leading-relaxed" style={{ color: "#5d6d7e" }}>{text}</p>
