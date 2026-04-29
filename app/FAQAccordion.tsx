@@ -11,24 +11,24 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="space-y-2">
+    <div>
       {items.map((item, index) => (
-        <div key={index} style={{ borderBottom: "1px solid #d4e6f1" }}>
+        <div key={index} style={{ borderBottom: "1px solid #d4e6f1", marginBottom: "24px", paddingBottom: "24px" }}>
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="w-full flex items-center justify-between py-5 text-left"
-            style={{ background: "none", border: "none", cursor: "pointer" }}
+            className="w-full flex items-center justify-between text-left"
+            style={{ background: "none", border: "none", cursor: "pointer", padding: "0" }}
           >
-            <span className="font-bold pr-4" style={{ color: "#1a5276", fontFamily: "'Playfair Display', serif", fontSize: "1.1rem" }}>
+            <span style={{ color: "#1a5276", fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700 }}>
               {item.question}
             </span>
-            <span className="flex-shrink-0 text-2xl font-bold" style={{ color: "#1a5276" }}>
+            <span style={{ color: "#1a5276", fontSize: "1.5rem", fontWeight: 700, flexShrink: 0, marginLeft: "16px" }}>
               {openIndex === index ? "−" : "+"}
             </span>
           </button>
           {openIndex === index && (
-            <div className="pb-5">
-              <p className="leading-relaxed" style={{ color: "#5d6d7e", fontSize: "0.95rem" }}>
+            <div style={{ marginTop: "12px" }}>
+              <p style={{ color: "#5d6d7e", fontSize: "0.95rem", lineHeight: 1.7 }}>
                 {item.answer}
               </p>
             </div>
