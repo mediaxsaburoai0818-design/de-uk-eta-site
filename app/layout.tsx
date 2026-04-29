@@ -94,7 +94,7 @@ function MobileMenu() {
 function Footer() {
   return (
     <footer className="bg-[#1a5276]" style={{ color: "white" }}>
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px", paddingTop: "48px", paddingBottom: "48px" }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-white text-lg font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
