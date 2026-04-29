@@ -16,15 +16,15 @@ export default function HomePage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,82,118,0.55), rgba(26,82,118,0.45))" }} />
+        {/* overlay removed */}
         <div className="relative max-w-3xl mx-auto px-10 md:px-16 py-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif", textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
             UK ETA Online
           </h1>
-          <p className="text-lg md:text-xl mb-3" style={{ color: "white" }}>
+          <p className="text-lg md:text-xl mb-3" style={{ color: "white", textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>
             Elektronische Reisegenehmigung fur Grossbritannien
           </p>
-          <p className="text-base mb-8 max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.9)" }}>
+          <p className="text-base mb-8 max-w-2xl mx-auto" style={{ color: "white", textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}>
             Ab April 2025 benotigen deutsche Staatsburger eine elektronische Reisegenehmigung (ETA) fur die Einreise nach Grossbritannien. Hier finden Sie alle wichtigen Informationen.
           </p>
           <a
