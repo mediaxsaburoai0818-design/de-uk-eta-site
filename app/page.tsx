@@ -41,7 +41,7 @@ export default function HomePage() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative max-w-3xl mx-auto px-10 md:px-16 py-20">
+        <div className="relative max-w-3xl mx-auto px-6 md:px-16 py-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif", textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
             UK ETA Online
           </h1>
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* Stats Section - light blue bg with floating cards + icons */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #1a5276", textAlign: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -100,8 +100,8 @@ export default function HomePage() {
 
       {/* Photo Card Grid Section - white bg */}
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Alles Wichtige zur UK ETA
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -122,8 +122,8 @@ export default function HomePage() {
 
       {/* Deutsche Community Section - light blue bg */}
       <section style={{ backgroundColor: "#eaf2f8" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Deutsche in Grossbritannien
           </h2>
           <p className="text-center mb-8 max-w-2xl mx-auto" style={{ color: "#5d6d7e" }}>
@@ -139,8 +139,8 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "inline-block", width: "100%" }}>
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 pb-4" style={{ fontFamily: "'Playfair Display', serif", color: "#1a5276", borderBottom: "3px solid #c0392b", display: "block" }}>
             Haufig gestellte Fragen
           </h2>
           <FAQAccordion items={faqItems} />
@@ -149,7 +149,7 @@ export default function HomePage() {
 
       {/* CTA Section - blue */}
       <section style={{ backgroundColor: "#1a5276" }} className="pt-16 pb-24 text-center">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Jetzt Ihre UK ETA beantragen
           </h2>
