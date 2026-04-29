@@ -148,7 +148,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section - blue */}
-      <section style={{ backgroundColor: "#1a5276", marginBottom: "20px" }} className="pt-16 pb-24 text-center">
+      <section style={{ backgroundColor: "#1a5276" }} className="pt-16 pb-24 text-center">
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Jetzt Ihre UK ETA beantragen
