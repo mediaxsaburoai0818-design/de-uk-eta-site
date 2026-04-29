@@ -22,9 +22,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column", width: "100%" }}>
         <Header />
-        <main className="flex-1 w-full">{children}</main>
+        <main style={{ flex: 1, width: "100%" }}>{children}</main>
         <Footer />
       </body>
     </html>

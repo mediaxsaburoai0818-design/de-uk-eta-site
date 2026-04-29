@@ -32,7 +32,7 @@ const photoCards = [
 
 export default function HomePage() {
   return (
-    <>
+    <div style={{ width: "100%" }}>
       {/* Hero Section */}
       <section className="relative min-h-[520px] flex items-center justify-center text-center text-white overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -167,6 +167,6 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-    </>
+    </div>
   );
 }
