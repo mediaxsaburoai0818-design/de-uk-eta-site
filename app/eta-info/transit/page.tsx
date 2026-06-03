@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Transit durch Grossbritannien | UK ETA fur Durchreise",
-  description: "Erfahren Sie, ob Sie eine UK ETA fur den Transit durch Grossbritannien benotigen. Regeln fur Flughafen-Transit und Durchreise.",
+  title: "Transit durch das Vereinigte Königreich — brauchen Sie 2026 ein UK ETA?",
+  description:
+    "Ist beim Transit durch das Vereinigte Königreich ein UK ETA erforderlich? Regeln für Anschlussflüge und Ausnahmen für die Transitzone von Flughäfen.",
 };
 
 export default function TransitPage() {

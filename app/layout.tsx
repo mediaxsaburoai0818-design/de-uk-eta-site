@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "UK ETA Online | Elektronische Reisegenehmigung fur Grossbritannien",
-  description: "Alle Informationen zur UK ETA (Electronic Travel Authorisation) fur deutsche Staatsburger. Gebuhren, Gultigkeit, Antragsprozess und mehr.",
-  metadataBase: new URL("https://eta-de.com"),
+  title: {
+    default: "UK ETA Online 2026 | Schritt-für-Schritt-Antragsleitfaden auf Deutsch",
+    template: "%s ‐ UK ETA Online",
+  },
+  description:
+    "Vollständiger Leitfaden zum UK ETA 2026 auf Deutsch. Für Reisen ins Vereinigte Königreich: ab dem 2. April 2025 verpflichtend — Antrag muss 3 Tage vor der Abreise gestellt werden. Achten Sie darauf, den Antrag rechtzeitig einzureichen.",
+  keywords:
+    "UK ETA, UK ETA 2026, Großbritannien, elektronische Reisegenehmigung, ETA-Antrag, Deutschland, Gebühr £20",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "UK ETA Online 2026 | Schritt-für-Schritt-Antragsleitfaden auf Deutsch",
+    description:
+      "Vollständiger Leitfaden zum UK ETA 2026 auf Deutsch. Für Reisen ins Vereinigte Königreich: ab dem 2. April 2025 verpflichtend — Antrag muss 3 Tage vor der Abreise gestellt werden. Achten Sie darauf, den Antrag rechtzeitig einzureichen.",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
