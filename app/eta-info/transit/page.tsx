@@ -1,109 +1,156 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Transit durch das Vereinigte Königreich — brauchen Sie 2026 ein UK ETA?",
+  title: "Transit durch Großbritannien - brauchen Sie 2026 eine UK ETA?",
   description:
-    "Ist beim Transit durch das Vereinigte Königreich ein UK ETA erforderlich? Regeln für Anschlussflüge und Ausnahmen für die Transitzone von Flughäfen.",
+    "Ist eine UK ETA beim Transit durch Großbritannien erforderlich? Regeln für Umsteigeverbindungen und Ausnahmen für den Transitbereich von Flughäfen.",
 };
 
-export default function TransitPage() {
+export default function Transit() {
   return (
-    <>
-      <section className="bg-[#022444] py-16 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Transit durch Grossbritannien
+    <div>
+      <section className="sub-hero relative overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/sub-hero/transit.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 sub-hero-scrim" />
+        <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">
+          <p className="kicker mb-3 mt-4">INFORMATIONEN ZUR UK ETA</p>
+          <h1
+            className="deco-head text-3xl md:text-4xl font-bold text-white mb-6"
+            style={{ fontFamily: "var(--font-noto-serif), serif" }}
+          >
+            <span className="deco-line" />
+            Transit durch Großbritannien &mdash; brauche ich eine UK ETA?
           </h1>
-          <p className="text-gray-300">ETA-Anforderungen fur die Durchreise</p>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Benotigt man eine ETA fur den Transit?
-          </h2>
-          <p className="text-gray-700 mb-8">
-            Ja, auch fur den Transit durch Grossbritannien ist eine UK ETA erforderlich. Dies gilt sowohl fur den Flughafen-Transit als auch fur die Durchreise durch das Land. Selbst wenn Sie Grossbritannien nur als Zwischenstopp auf dem Weg zu einem anderen Ziel nutzen, benotigen Sie eine gultige ETA.
+          <p className="text-white/85 leading-relaxed">
+            Ja, eine UK ETA ist auch beim Transit durch Großbritannien
+            erforderlich, selbst wenn Sie den Transitbereich des Flughafens
+            nicht verlassen.
           </p>
+        </div>
+      </section>
 
-          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Arten des Transits
-          </h2>
-          <div className="space-y-6 mb-12">
-            <div className="bg-[#f8f6f3] p-6">
-              <h3 className="text-lg font-semibold text-[#022444] mb-2">Airside Transit (Transitbereich)</h3>
-              <p className="text-gray-700 text-sm">
-                Wenn Sie den Transitbereich des Flughafens nicht verlassen und innerhalb von 24 Stunden weiterfliegen, benotigen Sie ebenfalls eine ETA. Dies unterscheidet sich von vielen anderen Landern, in denen ein Airside Transit ohne Genehmigung moglich ist.
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Transitregeln</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Seit dem 2. April 2025 benötigen EU-Bürger (einschließlich deutscher
+            Staatsbürger) eine UK ETA für den Transit durch Großbritannien. Das
+            gilt sowohl für den Transit im Sicherheitsbereich (Airside Transit)
+            als auch für den Transit außerhalb des Sicherheitsbereichs (Landside Transit).
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Arten des Transits</h2>
+          <div className="space-y-4">
+            <div className="border border-gray-200 rounded p-4">
+              <h3 className="font-bold text-[#022444] mb-2">Transit im Sicherheitsbereich (Airside Transit)</h3>
+              <p className="text-sm text-gray-600">
+                Umsteigen am Flughafen, ohne den internationalen Bereich zu
+                verlassen. Eine UK ETA ist erforderlich. Das betrifft z. B. das
+                Umsteigen in Heathrow auf dem Weg in die USA oder nach Kanada.
               </p>
             </div>
-            <div className="bg-[#f8f6f3] p-6">
-              <h3 className="text-lg font-semibold text-[#022444] mb-2">Landside Transit (mit Grenzkontrolle)</h3>
-              <p className="text-gray-700 text-sm">
-                Wenn Sie den Transitbereich verlassen, um z.B. das Gepack abzuholen oder den Terminal zu wechseln, mussen Sie die britische Grenzkontrolle passieren. Hierfur ist eine ETA zwingend erforderlich.
+            <div className="border border-gray-200 rounded p-4">
+              <h3 className="font-bold text-[#022444] mb-2">Transit außerhalb des Sicherheitsbereichs (Landside Transit)</h3>
+              <p className="text-sm text-gray-600">
+                Das Verlassen des Transitbereichs, z. B. um zwischen Terminals
+                zu wechseln, Gepäck abzuholen oder in einem Hotel zu übernachten.
+                Eine UK ETA ist erforderlich. Sie reisen formell nach
+                Großbritannien ein.
               </p>
             </div>
-            <div className="bg-[#f8f6f3] p-6">
-              <h3 className="text-lg font-semibold text-[#022444] mb-2">Durchreise per Zug oder Fahre</h3>
-              <p className="text-gray-700 text-sm">
-                Wenn Sie mit dem Eurostar durch den Eurotunnel fahren oder eine Fahre uber Grossbritannien nehmen, benotigen Sie ebenfalls eine ETA, sofern Sie britisches Territorium betreten.
-              </p>
-            </div>
-          </div>
-
-          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Haufige Transit-Szenarien fur deutsche Reisende
-          </h2>
-          <div className="overflow-x-auto mb-8">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-[#022444] text-white text-left">
-                  <th className="p-3 font-semibold">Route</th>
-                  <th className="p-3 font-semibold">ETA erforderlich?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200">
-                  <td className="p-3">Frankfurt - London Heathrow - New York</td>
-                  <td className="p-3 text-gray-700">Ja</td>
-                </tr>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <td className="p-3">Berlin - London Gatwick - Karibik</td>
-                  <td className="p-3 text-gray-700">Ja</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="p-3">Munchen - Dublin (uber London)</td>
-                  <td className="p-3 text-gray-700">Ja</td>
-                </tr>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <td className="p-3">Dusseldorf - Paris (Eurostar)</td>
-                  <td className="p-3 text-gray-700">Nein (kein UK-Territorium)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Tipps fur Transit-Reisende
-          </h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-3 mb-8">
-            <li>Beantragen Sie die ETA mindestens 72 Stunden vor Ihrem Transit</li>
-            <li>Informieren Sie sich bei Ihrer Fluggesellschaft, ob ein Transit uber UK geplant ist</li>
-            <li>Prufen Sie alternative Routen, die keinen UK-Transit erfordern</li>
-            <li>Beachten Sie, dass fur den Transit dieselbe ETA wie fur einen regularen Besuch gilt</li>
-            <li>Die Transit-ETA berechtigt auch zu einem Aufenthalt in Grossbritannien</li>
-          </ul>
-
-          <div className="bg-[#f8f6f3] p-6">
-            <h3 className="text-xl font-bold text-[#022444] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Wichtiger Hinweis
-            </h3>
-            <p className="text-gray-700">
-              Wenn Sie keinen gultigen ETA besitzen, kann Ihnen das Boarding fur Fluge mit Transit in Grossbritannien verweigert werden. Fluggesellschaften sind verpflichtet, die ETA vor dem Boarding zu uberprufen. Stellen Sie sicher, dass Ihre ETA genehmigt ist, bevor Sie Ihre Reise antreten.
-            </p>
           </div>
         </div>
       </section>
-    </>
+
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Beliebte Transitrouten über Großbritannien</h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Berlin &rarr; London (Heathrow) &rarr; New York</li>
+            <li>München &rarr; London (Gatwick) &rarr; Toronto</li>
+            <li>Hamburg &rarr; London (Stansted) &rarr; Dublin</li>
+            <li>Frankfurt &rarr; London (Luton) &rarr; Los Angeles</li>
+          </ul>
+          <p className="text-gray-600 mt-4">
+            Auf all diesen Routen ist eine UK ETA erforderlich, selbst wenn der
+            Aufenthalt am Flughafen nur wenige Stunden dauert.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Ausnahmen von der ETA-Pflicht beim Transit</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Es gibt wenige Ausnahmen von der ETA-Pflicht beim Transit:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Irische Staatsbürger (Common Travel Area, CTA)</li>
+            <li>Inhaber eines gültigen britischen Visums</li>
+            <li>Inhaber eines britischen Daueraufenthaltsstatus (Settled/Pre-Settled Status)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Wie vermeidet man die ETA-Pflicht beim Transit?</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Wenn Sie keinen UK-ETA-Antrag stellen möchten, können Sie Routen
+            wählen, die nicht durch Großbritannien führen. Zum Beispiel:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Direktflüge aus Deutschland zum Reiseziel</li>
+            <li>Umsteigeverbindungen in EU-Ländern (Amsterdam, Frankfurt, Paris)</li>
+            <li>Umsteigen in Dublin (Irland &mdash; keine ETA erforderlich)</li>
+          </ul>
+          <div className="bg-white border-l-4 border-[#022444] p-4 rounded-r text-sm text-gray-700 mt-6">
+            <strong>Tipp:</strong> Wenn Sie einen Flug mit Umstieg in London
+            planen, stellen Sie den UK-ETA-Antrag mindestens 72 Stunden vor dem
+            Abflug. Ohne ETA kann Ihnen das Boarding verweigert werden.
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/eta-info/application/"
+              className="bg-[#022444] hover:bg-[#0a3a6b] text-white px-6 py-3 rounded font-bold text-sm transition text-center"
+            >
+              So stellen Sie den Antrag &rarr;
+            </Link>
+            <a
+              href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full max-w-md mx-auto bg-[#8d1812] hover:bg-[#6d120e] rounded-xl border-2 border-white py-5 px-6 text-center transition shadow-lg"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              <span className="text-white text-lg font-bold" style={{ color: "white" }}>UK-ETA-Antrag stellen</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* breadcrumb-bottom */}
+      <section className="bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 pt-6 pb-2">
+          <Breadcrumb
+            items={[
+              { label: "Informationen zur UK ETA", href: "/eta-info/what-is-eta/" },
+              { label: "Transit durch Großbritannien" },
+            ]}
+          />
+        </div>
+      </section>
+    </div>
   );
 }

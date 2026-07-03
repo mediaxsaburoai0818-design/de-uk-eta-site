@@ -1,22 +1,69 @@
 import type { Metadata } from "next";
+import { Work_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
+import StickyCta from "@/components/StickyCta";
+
+// Font option 2 — Playfair Display (display/headings) × Work Sans (body).
+// Variable names kept identical so existing globals.css/components need no change.
+const notoSans = Work_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-noto-sans",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const notoSerif = Playfair_Display({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-noto-serif",
+  weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+const fraunces = Playfair_Display({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-fraunces",
+  weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "UK ETA Online 2026 | Schritt-für-Schritt-Antragsleitfaden auf Deutsch",
-    template: "%s ‐ UK ETA Online",
+    default: "UK ETA Portal 2026 | Deutschsprachige Schritt-für-Schritt-Anleitung",
+    template: "%s ‐ UK ETA Portal",
   },
   description:
-    "Vollständiger Leitfaden zum UK ETA 2026 auf Deutsch. Für Reisen ins Vereinigte Königreich: ab dem 2. April 2025 verpflichtend — Antrag muss 3 Tage vor der Abreise gestellt werden. Achten Sie darauf, den Antrag rechtzeitig einzureichen.",
+    "Deutschsprachiger kompletter UK-ETA-Leitfaden 2026. Bei Reisen nach Großbritannien seit dem 2. April 2025 Pflicht — der Antrag sollte 3 Tage vor der Abreise gestellt werden. Denken Sie daran, den Antrag rechtzeitig einzureichen.",
   keywords:
-    "UK ETA, UK ETA 2026, Großbritannien, elektronische Reisegenehmigung, ETA-Antrag, Deutschland, Gebühr £20",
+    "UK ETA, UK ETA 2026, Großbritannien, Reisegenehmigung, Electronic Travel Authorisation, ETA-Antrag, Deutschland, Gebühr £20",
   robots: { index: true, follow: true },
+  metadataBase: new URL("https://eta-de.com"),
   openGraph: {
-    title: "UK ETA Online 2026 | Schritt-für-Schritt-Antragsleitfaden auf Deutsch",
+    title: "UK ETA Portal 2026 | Deutschsprachige Schritt-für-Schritt-Anleitung",
     description:
-      "Vollständiger Leitfaden zum UK ETA 2026 auf Deutsch. Für Reisen ins Vereinigte Königreich: ab dem 2. April 2025 verpflichtend — Antrag muss 3 Tage vor der Abreise gestellt werden. Achten Sie darauf, den Antrag rechtzeitig einzureichen.",
+      "Deutschsprachiger kompletter UK-ETA-Leitfaden 2026. Bei Reisen nach Großbritannien seit dem 2. April 2025 Pflicht — der Antrag sollte 3 Tage vor der Abreise gestellt werden. Denken Sie daran, den Antrag rechtzeitig einzureichen.",
     locale: "de_DE",
     type: "website",
+    siteName: "UK ETA Portal",
+    url: "https://eta-de.com/",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UK ETA Portal — Big Ben und Westminster Bridge in London",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UK ETA Portal 2026 | Deutschsprachige Schritt-für-Schritt-Anleitung",
+    description:
+      "Deutschsprachiger kompletter UK-ETA-Leitfaden 2026 — Gebühr £20, Entscheidung meist innerhalb von 72 h, Gültigkeit 2 Jahre.",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -28,126 +75,22 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta
+          httpEquiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"
+        />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column", width: "100%" }}>
+      <body
+        className={`${notoSans.variable} ${notoSerif.variable} ${fraunces.variable} antialiased`}
+      >
         <Header />
-        <main style={{ flex: 1, width: "100%" }}>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
+        <Reveal />
+        <StickyCta />
       </body>
     </html>
-  );
-}
-
-function Header() {
-  return (
-    <header className="bg-[#1a5276] text-white">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="text-white no-underline hover:text-white" style={{ flexShrink: 0 }}>
-          <div className="text-lg md:text-xl font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            UK ETA Online
-          </div>
-          <div className="text-[10px] md:text-xs text-gray-300 tracking-wide">
-            Elektronische Reisegenehmigung
-          </div>
-        </a>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <a href="/eta-info/was-ist-eta/" className="text-gray-200 hover:text-white transition-colors">Was ist ETA?</a>
-          <a href="/eta-info/antrag/" className="text-gray-200 hover:text-white transition-colors">Antrag</a>
-          <a href="/eta-info/gebuehren/" className="text-gray-200 hover:text-white transition-colors">Kosten</a>
-          <a href="/eta-info/gueltigkeit/" className="text-gray-200 hover:text-white transition-colors">Gultigkeit</a>
-          <a href="/faq/" className="text-gray-200 hover:text-white transition-colors">FAQ</a>
-          <a href="/kontakt/" className="text-gray-200 hover:text-white transition-colors">Kontakt</a>
-        </nav>
-        <MobileMenuButton />
-      </div>
-      <MobileMenu />
-    </header>
-  );
-}
-
-function MobileMenuButton() {
-  return (
-    <label htmlFor="mobile-menu-toggle" className="md:hidden cursor-pointer p-2" style={{ flexShrink: 0 }}>
-      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", marginBottom: "5px", borderRadius: "2px" }}></span>
-      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", marginBottom: "5px", borderRadius: "2px" }}></span>
-      <span style={{ display: "block", width: "24px", height: "3px", backgroundColor: "white", borderRadius: "2px" }}></span>
-    </label>
-  );
-}
-
-function MobileMenu() {
-  return (
-    <>
-      <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
-      <nav className="md:hidden hidden peer-checked:block bg-[#0e3a56] border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm">
-          <a href="/" className="text-gray-200 hover:text-white py-1">Startseite</a>
-          <a href="/eta-info/was-ist-eta/" className="text-gray-200 hover:text-white py-1">Was ist ETA?</a>
-          <a href="/eta-info/antrag/" className="text-gray-200 hover:text-white py-1">Antrag stellen</a>
-          <a href="/eta-info/gebuehren/" className="text-gray-200 hover:text-white py-1">Gebuhren</a>
-          <a href="/eta-info/gueltigkeit/" className="text-gray-200 hover:text-white py-1">Gultigkeit</a>
-          <a href="/eta-info/status-pruefen/" className="text-gray-200 hover:text-white py-1">Status prufen</a>
-          <a href="/eta-info/erforderliche-dokumente/" className="text-gray-200 hover:text-white py-1">Dokumente</a>
-          <a href="/eta-info/transit/" className="text-gray-200 hover:text-white py-1">Transit</a>
-          <a href="/eta-info/deutsche-gemeinschaft/" className="text-gray-200 hover:text-white py-1">Deutsche in UK</a>
-          <a href="/faq/" className="text-gray-200 hover:text-white py-1">FAQ</a>
-          <a href="/kontakt/" className="text-gray-200 hover:text-white py-1">Kontakt</a>
-        </div>
-      </nav>
-    </>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-[#1a5276]" style={{ color: "white" }}>
-      <div style={{ maxWidth: "768px", marginLeft: "auto", marginRight: "auto", paddingLeft: "24px", paddingRight: "24px", paddingTop: "48px", paddingBottom: "48px" }}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="text-white text-lg font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              UK ETA Online
-            </h3>
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Umfassende Informationen zur elektronischen Reisegenehmigung (ETA) fur Reisen nach Grossbritannien. Diese Website ist kein offizieller Regierungsdienst.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">ETA-Informationen</h4>
-            <ul className="space-y-2 text-sm" style={{ color: "white" }}>
-              <li><a href="/eta-info/was-ist-eta/" className="hover:underline transition-colors" style={{ color: "white" }}>Was ist UK ETA?</a></li>
-              <li><a href="/eta-info/antrag/" className="hover:underline transition-colors" style={{ color: "white" }}>Antrag stellen</a></li>
-              <li><a href="/eta-info/gebuehren/" className="hover:underline transition-colors" style={{ color: "white" }}>Gebuhren und Kosten</a></li>
-              <li><a href="/eta-info/gueltigkeit/" className="hover:underline transition-colors" style={{ color: "white" }}>Gultigkeit</a></li>
-              <li><a href="/eta-info/erforderliche-dokumente/" className="hover:underline transition-colors" style={{ color: "white" }}>Erforderliche Dokumente</a></li>
-              <li><a href="/eta-info/transit/" className="hover:underline transition-colors" style={{ color: "white" }}>Transit durch UK</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Rechtliches</h4>
-            <ul className="space-y-2 text-sm" style={{ color: "white" }}>
-              <li><a href="/ueber-uns/" className="hover:underline transition-colors" style={{ color: "white" }}>Uber uns</a></li>
-              <li><a href="/kontakt/" className="hover:underline transition-colors" style={{ color: "white" }}>Kontakt</a></li>
-              <li><a href="/datenschutz/" className="hover:underline transition-colors" style={{ color: "white" }}>Datenschutz</a></li>
-              <li><a href="/nutzungsbedingungen/" className="hover:underline transition-colors" style={{ color: "white" }}>Nutzungsbedingungen</a></li>
-              <li><a href="/faq/" className="hover:underline transition-colors" style={{ color: "white" }}>FAQ</a></li>
-              <li><a href="/sitemap/" className="hover:underline transition-colors" style={{ color: "white" }}>Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-white/10 pt-6 text-center text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>
-          <p>&copy; 2025 UK ETA Online. Alle Rechte vorbehalten.</p>
-          <p className="mt-1">
-            Diese Website ist nicht mit der britischen Regierung verbunden. Offizielle Informationen finden Sie auf{" "}
-            <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" target="_blank" rel="noopener noreferrer" className="hover:underline underline" style={{ color: "white" }}>GOV.UK</a>.
-          </p>
-        </div>
-      </div>
-    </footer>
   );
 }

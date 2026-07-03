@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eta-de.com/datenschutz/</loc>
+    <loc>https://eta-de.com/eta-info/application/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/antrag/</loc>
+    <loc>https://eta-de.com/eta-info/expiration/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/deutsche-gemeinschaft/</loc>
+    <loc>https://eta-de.com/eta-info/fee/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/erforderliche-dokumente/</loc>
+    <loc>https://eta-de.com/eta-info/mobile-app/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/gebuehren/</loc>
+    <loc>https://eta-de.com/eta-info/official-gov-uk/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/gueltigkeit/</loc>
+    <loc>https://eta-de.com/eta-info/polish-community/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/offizielle-gov-uk/</loc>
+    <loc>https://eta-de.com/eta-info/required-documents/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/status-pruefen/</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://eta-de.com/eta-info/status-check/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -55,7 +55,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/eta-info/was-ist-eta/</loc>
+    <loc>https://eta-de.com/eta-info/what-is-eta/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -67,22 +67,34 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/kontakt/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://eta-de.com/nutzungsbedingungen/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://eta-de.com/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/site-info/about/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/site-info/agreement/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/site-info/contact/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/site-info/privacy-policy/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eta-de.com/sitemap/</loc>
@@ -91,9 +103,57 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eta-de.com/ueber-uns/</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://eta-de.com/news/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/news/oplata-uk-eta-20-funtow/</loc>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/news/uk-eta-w-pelni-obowiazkowa-luty-2026/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/news/obywatele-ue-uk-eta-od-kwietnia-2025/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/news/podwyzka-oplat-imigracyjnych-uk-2026/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/news/bezpieczenstwo-podrozy-wielka-brytania/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/uk-entry/wjazd-i-wiza/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/uk-entry/lotnisko-heathrow/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eta-de.com/uk-entry/lotniska-londynu/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

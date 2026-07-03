@@ -1,78 +1,93 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Sitemap | UK ETA Online",
-  description: "Ubersicht aller Seiten auf UK ETA Online. Finden Sie schnell die Informationen, die Sie suchen.",
+  title: "Sitemap",
+  description:
+    "Vollständige Liste aller Seiten auf UK ETA Online - durchsuchen Sie die Inhalte des Portals.",
 };
 
-const sitemapSections = [
+const sections = [
   {
-    title: "Startseite",
+    title: "Hauptseiten",
     links: [
-      { name: "Startseite", href: "/" },
+      { href: "/", label: "Startseite" },
+      { href: "/faq/", label: "FAQ" },
     ],
   },
   {
-    title: "ETA-Informationen",
+    title: "Informationen zur UK ETA",
     links: [
-      { name: "Was ist UK ETA?", href: "/eta-info/was-ist-eta/" },
-      { name: "Wie beantrage ich?", href: "/eta-info/antrag/" },
-      { name: "Gebuhren und Kosten", href: "/eta-info/gebuehren/" },
-      { name: "Gultigkeit", href: "/eta-info/gueltigkeit/" },
-      { name: "Status prufen", href: "/eta-info/status-pruefen/" },
-      { name: "Erforderliche Dokumente", href: "/eta-info/erforderliche-dokumente/" },
-      { name: "Offizielle GOV.UK-Website", href: "/eta-info/offizielle-gov-uk/" },
-      { name: "Transit durch UK", href: "/eta-info/transit/" },
-      { name: "Deutsche in Grossbritannien", href: "/eta-info/deutsche-gemeinschaft/" },
+      { href: "/eta-info/what-is-eta/", label: "Was ist die UK ETA?" },
+      { href: "/eta-info/application/", label: "Antragsverfahren" },
+      { href: "/eta-info/fee/", label: "Gebühren" },
+      { href: "/eta-info/expiration/", label: "Gültigkeitsdauer" },
+      { href: "/eta-info/status-check/", label: "Antragsstatus prüfen" },
+      { href: "/eta-info/required-documents/", label: "Erforderliche Dokumente" },
+      { href: "/eta-info/official-gov-uk/", label: "Offizielle Website GOV.UK" },
+      { href: "/eta-info/mobile-app/", label: "Mobile App" },
+      { href: "/eta-info/transit/", label: "Transit durch das Vereinigte Königreich" },
+      { href: "/eta-info/polish-community/", label: "Deutsche Staatsbürger im Vereinigten Königreich" },
     ],
   },
   {
-    title: "Website-Informationen",
+    title: "Informationen zur Website",
     links: [
-      { name: "Uber uns", href: "/ueber-uns/" },
-      { name: "Kontakt", href: "/kontakt/" },
-      { name: "Datenschutzerklarung", href: "/datenschutz/" },
-      { name: "Nutzungsbedingungen", href: "/nutzungsbedingungen/" },
-      { name: "Haufig gestellte Fragen (FAQ)", href: "/faq/" },
-      { name: "Sitemap", href: "/sitemap-page/" },
+      { href: "/site-info/about/", label: "Über uns" },
+      { href: "/site-info/contact/", label: "Kontakt" },
+      { href: "/site-info/privacy-policy/", label: "Datenschutzerklärung" },
+      { href: "/site-info/agreement/", label: "Nutzungsbedingungen" },
     ],
   },
 ];
 
-export default function SitemapPage() {
+export default function Sitemap() {
   return (
-    <>
-      <section className="bg-[#022444] py-16 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+    <div>
+      <section className="sub-hero relative overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/sub-hero/sitemap.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 sub-hero-scrim" />
+        <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">
+          <p className="kicker mb-3 mt-4">SITEMAP</p>
+          <h1
+            className="deco-head text-3xl md:text-4xl font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-noto-serif), serif" }}
+          >
+            <span className="deco-line" />
             Sitemap
           </h1>
-          <p className="text-gray-300">Ubersicht aller Seiten</p>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="space-y-10">
-            {sitemapSections.map((section, i) => (
-              <div key={i}>
-                <h2 className="text-xl font-bold text-[#022444] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {section.title}
-                </h2>
-                <ul className="space-y-2">
-                  {section.links.map((link, j) => (
-                    <li key={j}>
-                      <a href={link.href} className="text-[#8d1812] hover:text-[#a82018] underline text-sm">
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+      {sections.map((section, i) => (
+        <section key={section.title} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+          <div className="max-w-4xl mx-auto px-6 py-10">
+            <h2 className="font-bold text-[#022444] text-lg mb-3 border-b border-gray-200 pb-2">
+              {section.title}
+            </h2>
+            <ul className="space-y-2">
+              {section.links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-600 hover:text-[#022444] transition underline underline-offset-2"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+        </section>
+      ))}
+      {/* breadcrumb-bottom */}
+      <section className="bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 pt-6 pb-2">
+          <Breadcrumb items={[{ label: "Sitemap" }]} />
         </div>
       </section>
-    </>
+    </div>
   );
 }

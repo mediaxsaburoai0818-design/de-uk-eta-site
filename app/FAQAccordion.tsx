@@ -13,22 +13,22 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} style={{ borderBottom: "1px solid #d4e6f1", marginBottom: "24px", paddingBottom: "24px" }}>
+        <div key={index} style={{ borderBottom: "1px solid #d0d0d0", marginBottom: "24px", paddingBottom: "24px" }}>
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full flex items-center justify-between text-left"
             style={{ background: "none", border: "none", cursor: "pointer", padding: "0" }}
           >
-            <span style={{ color: "#1a5276", fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700 }}>
+            <span style={{ color: "#022444", fontFamily: "var(--font-noto-serif), 'Noto Serif', serif", fontSize: "1.1rem", fontWeight: 700 }}>
               {item.question}
             </span>
-            <span style={{ color: "#1a5276", fontSize: "1.5rem", fontWeight: 700, flexShrink: 0, marginLeft: "16px" }}>
+            <span style={{ color: "#022444", fontSize: "1.5rem", fontWeight: 700, flexShrink: 0, marginLeft: "16px" }}>
               {openIndex === index ? "−" : "+"}
             </span>
           </button>
           {openIndex === index && (
             <div style={{ marginTop: "12px" }}>
-              <p style={{ color: "#5d6d7e", fontSize: "0.95rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#666", fontSize: "0.95rem", lineHeight: 1.7 }}>
                 {item.answer}
               </p>
             </div>
